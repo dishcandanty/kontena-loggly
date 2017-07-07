@@ -1,0 +1,11 @@
+---
+stack: logs
+variables:
+  DOCKER_IMAGE:
+    type: string
+    from:
+      env: DOCKER_IMAGE
+services:
+  fluentd:
+    image: ${DOCKER_IMAGE}
+    instances: 1
